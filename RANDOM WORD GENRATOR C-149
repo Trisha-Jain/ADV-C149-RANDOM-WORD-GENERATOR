@@ -1,0 +1,25 @@
+
+
+
+from tkinter import*
+import random 
+
+root = Tk()
+
+root.title("Lucky Friend Wheel")
+root.geometry("500x500")
+
+list1 = [ " Saanvi" , "Palak" , "Shurrti" , "Manav" , "Janya"]
+print(list1)
+
+def random_number():
+    random_no =random.randint(0, 4)
+    print(random_no)
+    random_lucky_friend = list1[random_no]
+    print("Your Lucky Friend is :" + random_lucky_friend)
+    
+btn1 = Button(root)
+btn1 = Button(root , text="Who is ur lucky friend? ", command= random_number) 
+btn1.place(relx = 0.5 , rely = 0.5, anchor = CENTER )
+
+root.mainloop()
